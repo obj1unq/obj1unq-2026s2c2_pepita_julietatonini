@@ -107,3 +107,54 @@ Teniendo en cuenta tu solución del problema, respondé las preguntas siguientes
    
    d. ¿Qué objetos implementan ese tipo?
 
+
+
+----------------------------------------------------------------------------------------------------------------
+
+# Pepita - Excepciones y Testing
+
+(Excepcion es busco que me de error. Cuando se lanza un error el programa no se cancela. )
+
+
+El objetivo de este ejercicio es extender el ejercicio de pepita, resuelto anteriormente, para incluir testing y excepciones.
+
+Se pide agregar los test que prueben los casos a continuación e implementar los cambios necesarios en los objetos
+
+
+
+1. Casos de Éxito:
+
+El enunciado original ya incluye casos de éxito. Por cada escenario se pide implementar un test.
+
+
+
+
+2. Validación de pepita al volar
+
+Pepita sólo puede volar una distancia si dispone de la cantidad de energía adecuada para  consumir.
+
+Escribir un test con el siguiente caso de ejemplo:
+
+- pepita inicia con 100 de energía
+- pepita vuela 10 kms, 
+- verificar que la energía de pepita es de 89
+- Pepita intenta volar 1000 kms, pero como no se puede (debe lanzar un error)
+- verificar que la energía de pepita sigue siendo  89
+
+Nota: No se pide validar la energía de pepón al volar
+
+
+
+3. Validación de pepón al comer 
+
+A Pepón le gusta alimentarse de manera variada y balanceada, por lo que solo come variado. Si se le da de comer lo mismo que comió la última vez se niega. Al iniciar el sistema se sabe que pepón comió manzana la última vez.
+
+- Pepón inicia con 30 de energía y su último alimento fue manzana
+- Pepón come alpiste, quedando su energía en 42.5.
+- Pepón intenta comer alpiste de nuevo,  pero no puede porque es lo que comió último (debe lanzar un error).
+- Verificar que la energía de pepón se mantiene en  42.5.
+- Si luego come manzana lo hace sin problemas.
+- Intenta nuevamente comer una manzana, pero no se puede
+
+
+
