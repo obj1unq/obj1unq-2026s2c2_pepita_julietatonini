@@ -1,25 +1,36 @@
 object pepita{
+    var energia = 100
 
-var energia = 100
+    method volar (distancia){
+        self.validarVolar(distancia)
+        energia = energia - self.energiaGastoVolando(distancia)
+    }
 
-method volar (distancia){
-    energia = energia - 10 - distancia/10
-}
+    method validarVolar(distancia){
+        if (self.energia() < self.energiaGastoVolando(distancia)) {
+            self.error("no puede volar")
+        }
+    }
 
-method descansar(){
-    energia = energia + 10
-}
+    method energiaGastoVolando(distancia){
+        return 10 + distancia/10
+    }
 
-method comer(alimento){
-    energia = energia + alimento.energiaQueAporta()
-}
+    method descansar(){
+        energia = energia + 10
+    }
 
-method energia(){
-    return energia
-}
-method estaCansado(){
-    return self.energia() < 30
-}
+    method comer(alimento){
+        energia = energia + alimento.energiaQueAporta()
+    }
+
+    method energia(){
+        return energia
+    }
+
+    method estaCansado(){
+        return self.energia() < 30
+    }
 }
 
 
@@ -66,9 +77,24 @@ object pepon{
 
     var energia = 30
 
+    var ultimaComida = manzana
+
     method comer(alimento){
+        self.validarComer(alimento)
         energia = energia + (alimento.energiaQueAporta() / 2)
+        ultimaComida = alimento
     }
+
+    method validarComer(alimento){
+        if (self.ultimaComida() == alimento) {
+            self.error("pepon se niega a comer")
+        }
+    }
+
+    method ultimaComida(){
+        return ultimaComida
+    }
+
 
     method volar(distancia){
         energia = energia - (20 + 2*distancia)

@@ -129,20 +129,28 @@ El enunciado original ya incluye casos de éxito. Por cada escenario se pide imp
 
 
 
-2. Validación  de pepita al volar
+2. Validación de pepita al volar
 
-- Pepita sólo puede volar una distancia si dispone de la cantidad de energía adecuada para  consumir
-- Escribir un test con el siguiente caso de ejemplo:
+Pepita sólo puede volar una distancia si dispone de la cantidad de energía adecuada para  consumir.
+
+Escribir un test con el siguiente caso de ejemplo:
+
 - pepita inicia con 100 de energía
 - pepita vuela 10 kms, 
 - verificar que la energía de pepita es de 89
 - Pepita intenta volar 1000 kms, pero como no se puede (debe lanzar un error)
 - verificar que la energía de pepita sigue siendo  89
-- Nota: No se pide validar la energía de pepón al volar
-- Validación de pepón al comer 
-- A Pepón le gusta alimentarse de manera variada y balanceada, por lo que solo come variado. Si se le da de comer lo mismo que comió la última vez se niega. Al iniciar el sistema se sabe que pepón comió manzana la última vez.
+
+Nota: No se pide validar la energía de pepón al volar
+
+
+
+3. Validación de pepón al comer 
+
+A Pepón le gusta alimentarse de manera variada y balanceada, por lo que solo come variado. Si se le da de comer lo mismo que comió la última vez se niega. Al iniciar el sistema se sabe que pepón comió manzana la última vez.
+
 - Pepón inicia con 30 de energía y su último alimento fue manzana
-- Pepón comer alpiste, quedando su energía en 42.5.
+- Pepón come alpiste, quedando su energía en 42.5.
 - Pepón intenta comer alpiste de nuevo,  pero no puede porque es lo que comió último (debe lanzar un error).
 - Verificar que la energía de pepón se mantiene en  42.5.
 - Si luego come manzana lo hace sin problemas.

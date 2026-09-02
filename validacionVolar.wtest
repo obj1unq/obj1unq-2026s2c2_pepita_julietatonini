@@ -1,0 +1,29 @@
+import pepita.*
+
+describe "Validación de Pepita al volar" {
+
+    test "Pepita volando" {
+        assert.equals(100, pepita.energia())
+        pepita.volar(10)
+        assert.equals(89, pepita.energia())
+        assert.throwsException({pepita.volar(1000)}) 
+        assert.equals(89, pepita.energia())
+    }
+}
+
+
+
+describe "Validación de pepón al comer"{
+
+    test "pepon come variado" {
+        assert.equals(30, pepon.energia())
+        assert.equals(manzana, pepon.ultimaComida())
+        pepon.comer(alpiste)
+        assert.equals(42.5, pepon.energia())
+        assert.throwsException({pepon.comer(alpiste)})
+        assert.equals(42.5, pepon.energia())
+        pepon.comer(manzana)
+        assert.equals(manzana, pepon.ultimaComida())
+        assert.throwsException({pepon.comer(manzana)})
+    }
+}
