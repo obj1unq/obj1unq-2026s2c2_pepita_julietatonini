@@ -1,0 +1,49 @@
+import pepita.*
+
+describe "Tests de Pepita" {
+
+    test "comportamiento básico de Pepita" {
+        //act
+        pepita.volar(200)
+        //assert 
+        assert.notThat(pepita.estaCansado())
+        //act 
+        pepita.volar(350)
+        //assert
+        assert.that(pepita.estaCansado())
+        //act
+        pepita.descansar()
+        //assert
+        assert.notThat(pepita.estaCansado())
+    }
+
+
+
+    test "alimentar a Pepita" {
+        //act
+        pepita.volar(900)
+        //assert
+        assert.that(pepita.estaCansado())
+        //act 
+        pepita.comer(alpiste)
+        //assert
+        assert.that(pepita.estaCansado())
+        //act 
+        pepita.comer(alpiste)
+        //assert
+        assert.notThat(pepita.estaCansado())
+    }
+
+
+
+    test "dieta variada" {
+        //act
+        pepita.volar(900)
+        //assert
+        assert.that(pepita.estaCansado())
+        //act
+        manzana.gradoMadurez(2)
+        //assert
+        assert.equals(40, energiaQueAporta())
+    }
+}
